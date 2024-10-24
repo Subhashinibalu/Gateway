@@ -10,5 +10,6 @@ async function bootstrap() {
   app.enableCors();
   app.useStaticAssets(join(__dirname, '..', 'public')); // Serve static files from the uploads directory
   await app.listen(configService.get("PORT"));
+  console.log(`Server is listening on port ${configService.get("PORT")}`);
 }
 bootstrap();
